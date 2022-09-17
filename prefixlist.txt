@@ -1,0 +1,109 @@
+Availability Zone: us-west-2c
+Cider block: 172.31.0.0/20
+Associated VPC name: vpc-4566b420
+Route table id: rtb-58e8373d
+ARN AWS I am role: arn:aws:iam::192503499189:role/vmware-sddc-formation-978f2bc5-f042-4c4-RemoteRole-SYJJ3IRGMABG
+External id: vmware-vmc
+Cross Vpc CIDR: 172.31.0.0/16
+
+
+Logical routers:
+LR name: VDR-c, pmac: 0a:42:45:bd:6c:dd, LR id: 0xfffffffc, refCount: 22
+
+lifName        Id        Type      IP                  mac                 Flags
+-------        --        ----      --                  ---                 -----
+DownlinkLif    102       VLAN      10.68.43.81/28      02:50:56:56:44:52   0x0
+UplinkLif      7         VLAN      172.31.11.10/20     02:50:56:56:44:52   0x0
+tunnel-lif     67599     Overlay   127.11.0.4/20       11:11:11:11:11:12   0x100388
+
+Route dest           Nexthop|Lif
+----------           -----------
+10.68.43.81/28       DownlinkLif
+169.254.169.254/32   Null
+0.0.0.0/0            172.31.0.1
+1.1.1.0/24           10.68.43.83
+192.168.1.0/24       10.68.43.83
+10.10.10.0/24        10.68.43.83
+172.16.10.0/24       10.68.43.83
+172.172.16.0/24      10.68.43.83
+172.16.20.0/24       10.68.43.83
+10.68.42.0/23        10.68.43.83
+172.31.11.10/20      UplinkLif
+172.31.12.168/32     10.68.43.83
+
+
+VDR connections
+Subnet               NextHop              VDR state  AWS state  Processing Time(us)  Error msg
+------               -------              ---------  ---------  -------------------  ---------
+172.31.12.168/32     10.68.43.83          UP         UP         80066194
+1.1.1.0/24           10.68.43.83          UP         DOWN       194157286807         The maximum number of routes has been reached.
+192.168.1.0/24       10.68.43.83          UP         DOWN       194157286643         The maximum number of routes has been reached.
+10.10.10.0/24        10.68.43.83          UP         DOWN       194157286434         The maximum number of routes has been reached.
+172.16.10.0/24       10.68.43.83          UP         DOWN       194157286186         The maximum number of routes has been reached.
+172.172.16.0/24      10.68.43.83          UP         DOWN       194157285931         The maximum number of routes has been reached.
+172.16.20.0/24       10.68.43.83          UP         DOWN       194157285761         The maximum number of routes has been reached.
+10.68.42.0/23        10.68.43.83          UP         UP         74235
+
+
+Cross VPC route table id: rtb-0d46a2a2137d32649 size: 5
+subnet               eni id
+------               ------
+172.16.44.0/24       eni-0fe59f3f3fc5b5d96
+172.16.45.0/24       eni-0fe59f3f3fc5b5d96
+172.16.46.0/24       eni-0fe59f3f3fc5b5d96
+172.16.47.0/24       eni-0fe59f3f3fc5b5d96
+172.16.48.0/24       eni-0fe59f3f3fc5b5d96
+172.16.49.0/24       eni-0fe59f3f3fc5b5d96
+172.16.50.0/24       eni-0fe59f3f3fc5b5d96
+172.16.51.0/24       eni-0fe59f3f3fc5b5d96
+172.16.52.0/24       eni-0fe59f3f3fc5b5d96
+172.16.59.0/24       eni-0fe59f3f3fc5b5d96
+172.16.60.0/24       eni-0fe59f3f3fc5b5d96
+172.16.61.0/24       eni-0fe59f3f3fc5b5d96
+172.16.62.0/24       eni-0fe59f3f3fc5b5d96
+172.16.63.0/24       eni-0fe59f3f3fc5b5d96
+172.16.64.0/24       eni-0fe59f3f3fc5b5d96
+172.16.65.0/24       eni-0fe59f3f3fc5b5d96
+172.16.66.0/24       eni-0fe59f3f3fc5b5d96
+172.16.67.0/24       eni-0fe59f3f3fc5b5d96
+172.16.68.0/24       eni-0fe59f3f3fc5b5d96
+172.16.69.0/24       eni-0fe59f3f3fc5b5d96
+172.16.70.0/24       eni-0fe59f3f3fc5b5d96
+172.16.71.0/24       eni-0fe59f3f3fc5b5d96
+172.16.72.0/24       eni-0fe59f3f3fc5b5d96
+172.16.73.0/24       eni-0fe59f3f3fc5b5d96
+172.16.74.0/24       eni-0fe59f3f3fc5b5d96
+172.16.75.0/24       eni-0fe59f3f3fc5b5d96
+172.16.76.0/24       eni-0fe59f3f3fc5b5d96
+172.16.77.0/24       eni-0fe59f3f3fc5b5d96
+172.16.78.0/24       eni-0fe59f3f3fc5b5d96
+172.16.79.0/24       eni-0fe59f3f3fc5b5d96
+172.16.80.0/24       eni-0fe59f3f3fc5b5d96
+172.16.81.0/24       eni-0fe59f3f3fc5b5d96
+172.16.82.0/24       eni-0fe59f3f3fc5b5d96
+172.16.83.0/24       eni-0fe59f3f3fc5b5d96
+172.16.84.0/24       eni-0fe59f3f3fc5b5d96
+172.16.85.0/24       eni-0fe59f3f3fc5b5d96
+172.16.86.0/24       eni-0fe59f3f3fc5b5d96
+172.16.87.0/24       eni-0fe59f3f3fc5b5d96
+172.16.88.0/24       eni-0fe59f3f3fc5b5d96
+172.16.89.0/24       eni-0fe59f3f3fc5b5d96
+172.16.90.0/24       eni-0fe59f3f3fc5b5d96
+172.16.91.0/24       eni-0fe59f3f3fc5b5d96
+172.16.92.0/24       eni-0fe59f3f3fc5b5d96
+172.16.93.0/24       eni-0fe59f3f3fc5b5d96
+172.16.94.0/24       eni-0fe59f3f3fc5b5d96
+192.168.72.0/24      eni-0a77f7686416d0736
+192.168.73.0/24      eni-0ad5bb31b16eac000
+10.68.42.0/23        eni-09372a5c10024614d
+
+AWS Managed Prefix Lists:
+  Dest Prefix List          NextHop EniId             Status        Route Type
+  ----------------          -------------             ------        -----------
+  pl-00b76bbc7db11ce77      eni-0bec80073c7c4cb75     active        CreateRoute
+  pl-078e8002a10572aef      eni-0f4995544d42f6342     active        CreateRoute
+  pl-68a54001               vpce-049cc3e75aea1a88f    active        CreateRoute
+
+
+[7] EniId: eni-09372a5c10024614d, primary private ip: 172.31.11.10, mac: 0a:42:45:bd:6c:dd, ciderBlock: 172.31.0.0/20
+Secondary private ips: 172.31.12.168

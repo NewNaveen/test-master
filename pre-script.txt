@@ -1,0 +1,20 @@
+pm.sendRequest({
+    url: 'https://console.cloud.vmware.com/csp/gateway/am/api/auth/api-tokens/authorize',
+    method: 'POST',
+    header: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'accept': 'application/json',
+        'Postman-Token': ''
+    },
+    body: {
+        mode: 'urlencoded',
+        urlencoded: [ 
+            {key: "refresh_token", value: "iFkQ7WVXrGuWocNswzfcGY5wY6Le4Yfk2G3o3BgcjOHa8NhE6FPKG1CeXEMDOa7T", disabled: false},
+            {key: "grant-type", value:"refresh_token", disabled:false}]
+    }
+}, function (err, res) {
+    pm.environment.set("csp-auth-token", res.json().access_token);
+    pm.environment.set("baseUrl", "https://"+environment['nsxmanager']+"/orgs/"+environment['orgid']+"/sddcs/"+environment['sddcid']+"/sks-nsxt-manager/api/v1");
+    pm.environment.set("baseUrlPolicy", "https://"+environment['nsxmanager']+"/orgs/"+environment['orgid']+"/sddcs/"+environment['sddcid']+"/sks-nsxt-manager/policy/api/v1");
+    
+});
