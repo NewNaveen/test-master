@@ -1,14 +1,10 @@
-list1 = []
+ip_address = [{"ip_address": ["172.30.192.5", "172.30.192.4", "172.30.192.6"],
+              "resource_type": "IPAddressExpression"}]
 
-for i in range(201, 1101):
-    data = {
-        "transport_zone_id": "cf3bc7c9-a8cd-493b-b9e2-aa59f7453ad4",
-        "replication_mode": "SOURCE",
-        "admin_state": "UP",
-        "display_name": f"rajuna-test-{i}",
-        "hybrid": False
-    }
-    list1.append(data)
+y = {"expression": []}
 
-print(len(list1))
-print(list1)
+y["expression"] = ip_address
+
+print(y)
+
+
